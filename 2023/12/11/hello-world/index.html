@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Hello World | Dongyu&#39;s Blog
+      What do we need uncertainties for? | Dongyu&#39;s Blog
     
   </title>
   <meta name="author" content="Dongyu Gao">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「Hello World」
+			「What do we need uncertainties for?」
 		
 	</p>
 
@@ -243,7 +243,7 @@
 		<div class="article-title">
 			
 	<a href="/2023/12/11/hello-world/" itemprop="url">
-		Hello World
+		What do we need uncertainties for?
 	</a>
 
 		</div>
@@ -261,7 +261,7 @@
 
 	<a href="/2023/12/11/hello-world/" itemprop="url">
 		<time datetime="2023-12-11T21:38:06.228Z" itemprop="dateUpdated">
-	  		2023-12-11
+	  		2023-12-12
 	  </time>
 	</a> 
 
@@ -279,8 +279,29 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+			<p>Uncertainty can be recognised as a nature in statistical learning. To get better understanding of such property of model learning behavior, we will parse the concept of uncertainty from the perspective of data distribution and learning stage. Then we will take image segmentation in medical scenario as an example to show how to better control uncertainty. Finally, we critically argue that we don’t need uncertainty all the time, and there is a trade off in between to decide if we pay attention to it or not.</p>
+<h2 id="Out-of-distribution-OOD-and-Zero-shot-learning"><a href="#Out-of-distribution-OOD-and-Zero-shot-learning" class="headerlink" title="Out of distribution(OOD) and Zero-shot learning"></a>Out of distribution(OOD) and Zero-shot learning</h2><p>The predictive uncertainty can be always represented as<br>$$ p(y|x,D) &#x3D; \int p(y|x,\theta)p(\theta, D) d\theta $$<br>,where y is the label, x is the sample, $\theta$ is the model parameter and D is the whole dataset. The predictive probability is decomposed into two parts based on the marginalization in Baysian inference. The posterior distribution we are really interested in is the predictive result of sample inside the dataset, but we have the information $\theta$ as condition in each learning steps - that is why we use conditioned multiply joint probability to get the outcome; and we call the conditioned probability here as learned uncertainty (also “aleatoric uncertainty”, prediction uncertainty) and deduced uncertainty(also “epistemic uncertainty”, model parameter uncertainty).</p>
+<p>Imagine a openset contains unseen category of data, in the model inference stage, the trained parameters are all learned from in-distribution data. Then we can say the principal uncertainty we are interested in here is the deduced uncertainty, which symbolically written as the joint distribution for training set and model parameters. </p>
+<p><a target="_blank" rel="noopener" href="https://paperswithcode.com/task/open-set-learning">Open-Set Learning</a> is a task under challenging and realistic setting, where there exist test samples from the classes that are unseen during training. <strong>Open set recognition (OSR)</strong> is the sub-task of detecting test samples which do not come from the training. <a target="_blank" rel="noopener" href="https://paperswithcode.com/task/ood-detection">Out-of-distribution(OOD) Detection</a> is the task of detecting instances that do not belong to the distribution the classifier has been trained on. OOD data is often referred to as “unseen” data, as the model has not encountered it during training. </p>
+<h2 id="Posthoc-vs-Online"><a href="#Posthoc-vs-Online" class="headerlink" title="Posthoc vs. Online"></a>Posthoc vs. Online</h2><p>Acquiring the uncertainty information and calibrating confidence can both happen as online or posthoc. The posthoc approach is simpler since the training stage remains stationary. While for the online calibration, we can either use a generative architecture(like VAE) in one training process, or train similar models with changing parameters stochastically and get ensemble uncertainty from sampled training trials(check <a target="_blank" rel="noopener" href="https://paperswithcode.com/paper/dropout-as-a-bayesian-approximation">Dropout as a Bayesian Approximation</a>). The latter one can be computationally expensive considering the ensemble. </p>
+<p>Comparatively, posthoc approach like temperature scaling or platt scalling can is more easier, yet we still need to fine-tune parameters into the best fit.</p>
+<h2 id="Example-medical-image-segmentation"><a href="#Example-medical-image-segmentation" class="headerlink" title="Example: medical image segmentation"></a>Example: medical image segmentation</h2><p>Under the medical scenario, the uncertainty can from different sources - like letting different expert to annotate same dataset, or model intrinsic uncertainty. If we want to get more reliable and robust segmentation result of the lesion and reduce ambiguity, we need take these uncertainty information into consideration. </p>
+<p>Potential approaches can be,</p>
+<ol>
+<li>Ensemble: <a target="_blank" rel="noopener" href="https://paperswithcode.com/paper/dropout-as-a-bayesian-approximation">Dropout as a Bayesian Approximation</a></li>
+<li>Probablistic model: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1806.05034">A Probabilistic U-Net for Segmentation of Ambiguous Images</a></li>
+<li>Label smoothing: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2104.05788">Spatially Varying Label Smoothing: Capturing Uncertainty from Expert Annotations</a></li>
+</ol>
+<p>Here label smoothing is to adjust the distribution of the label as a regularization term while training.</p>
+<p>For evaluation, expected common segmentation evaluation metrics for calculating segmentation accurary, normally we can use Expected Calibration Error(ECE) to get reliability graph. ECE measures the consistency between the predicted probabilities and the actual observed frequencies of events. ECE quantifies the difference between the model’s predicted probabilities and the empirical probabilities of events, providing an important measure of the calibration quality of probability predictions.</p>
+<h2 id="A-trade-off"><a href="#A-trade-off" class="headerlink" title="A trade off"></a>A trade off</h2><p>Approximation can be quite computationally expensive. Poor calibration of modern neural network is <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.04599">reported in 2017</a>. A intuitive thinking is, we need to find the trade of between traditional method and neural network method, and if we need uncertainty information or not, based on task property, data scale, computational resources and so on.</p>
+<!-- Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
+## Quick Start
+
+### Create a new post
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -291,7 +312,7 @@
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a> –&gt;</p>
 	
 		</div>
 		
