@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Reading notes on NeRF uncertainty quantification | Dongyu&#39;s Blog
+      How to represent Geometry? - 3DGs | Dongyu&#39;s Blog
     
   </title>
   <meta name="author" content="Dongyu Gao">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「Reading notes on NeRF uncertainty quantification」
+			「How to represent Geometry? - 3DGs」
 		
 	</p>
 
@@ -242,8 +242,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/12/13/bayesrays/" itemprop="url">
-		Reading notes on NeRF uncertainty quantification
+	<a href="/2023/12/14/3DGs/" itemprop="url">
+		How to represent Geometry? - 3DGs
 	</a>
 
 		</div>
@@ -259,8 +259,8 @@
 
 	更新于
 
-	<a href="/2023/12/13/bayesrays/" itemprop="url">
-		<time datetime="2023-12-13T21:09:40.672Z" itemprop="dateUpdated">
+	<a href="/2023/12/14/3DGs/" itemprop="url">
+		<time datetime="2023-12-14T21:04:05.719Z" itemprop="dateUpdated">
 	  		2023-12-14
 	  </time>
 	</a> 
@@ -279,10 +279,19 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h1 id="Baye’s-NeRF"><a href="#Baye’s-NeRF" class="headerlink" title="Baye’s NeRF"></a>Baye’s NeRF</h1><p>NeRFs(Neural Radiance Fields) has inherently uncertainty. Quantifying these uncertainty is demanding. <a target="_blank" rel="noopener" href="https://bayesrays.github.io/">This work</a> aims to build a post-hoc framework to evaluate uncertainty (without modifying training process). The approach of building up such a volumetric uncertainty field is through spatial perturbations and Bayesian Laplace approximation. </p>
-<h1 id="Estimating-3D-Uncertainty-Field"><a href="#Estimating-3D-Uncertainty-Field" class="headerlink" title="Estimating 3D Uncertainty Field"></a>Estimating 3D Uncertainty Field</h1><p>NeRF lack the capacity to quantify uncertainty in their predictions. <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.01815.pdf">This work</a> aims at modelling a stochastic radiance field to quantify the uncertainty on the learned surface. </p>
-<h1 id="Hessian-approximation"><a href="#Hessian-approximation" class="headerlink" title="Hessian approximation"></a>Hessian approximation</h1><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.15078">This work</a> aims to develop an approach to, which can add calibration on autoencoders.</p>
-	
+			<h1 id="Rasterization"><a href="#Rasterization" class="headerlink" title="Rasterization"></a>Rasterization</h1><blockquote>
+<p>The process of finding all the pixels in an image that are occupied by a geometric primitive is called rasterization. </p>
+</blockquote>
+<p>—— <em>Fundamental of computer graphics, fourth edition, written by Steve Marschner, Peter Shirley, et al.</em> </p>
+<p>The main goal of rasterization is to project the 3D triangle into the project plane and pixelization it. A normal way of rasterization is using triangles. In this way the problem comes to, “is the pixel inside the triangle?”</p>
+<p>Triangle is the most basic polygon and it owns special property of planar-garanteed. In order to make sure our pixel is always in the triangle, we just need to use cross product to determine whether a point is located inside a triangle by representing the pixel as the barycenter of the triangle. </p>
+<p><img src="/sources/images/4.PNG" alt="On triangle rasterization. 1 is to show the general idea of triangle rasterization. 2 is to show how to sample pixels in the triangle. 3 is to show the rule of how to determine whether pixel is inside the triangle or not."></p>
+<p>Check image 3 above, we can easily know that, </p>
+<p>$$ (AB \times AP) \cdot (BC \times BP) &gt; 0 $$<br>$$ (AB \times AP) \cdot (CA \times CP) &gt; 0$$<br>$$ (CA \times CP) \cdot (BC \times BP) &gt; 0$$</p>
+<p>, means that the pixel is inside the triangle.</p>
+<p><em>Image 1 and 2 are form <a target="_blank" rel="noopener" href="https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html">GAMES101: 现代计算机图形学入门</a>; image 3 is from <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/449289345">知乎专栏</a>.</em></p>
+<h1 id="Explicit-Implicit-Geometry"><a href="#Explicit-Implicit-Geometry" class="headerlink" title="Explicit&#x2F;Implicit Geometry"></a>Explicit&#x2F;Implicit Geometry</h1><p>In the explicit geometry, the shape can be directly described from vertex coordinates or equation of the boundary curve. While in implicit geometry, the shape is represented by implicit function without giving information about all point-coordinates on the circle.</p>
+<h1 id="3D-Gaussian"><a href="#3D-Gaussian" class="headerlink" title="3D Gaussian"></a>3D Gaussian</h1><h1 id="Splatting"><a href="#Splatting" class="headerlink" title="Splatting"></a>Splatting</h1>	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -300,12 +309,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2023/12/14/3DGs/" title="How to represent Geometry? - 3DGs" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2023/12/12/mono-sf/" title="Monocular Scene Flow Estimation" rel="next">
+			<a href="/2023/12/13/bayesrays/" title="Reading notes on NeRF uncertainty quantification" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -326,23 +331,22 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/12/14/3DGs/" title="How to represent Geometry? - 3DGs">
-								How to represent Geometry? - 3DGs			
+							<a class="relate-post-title" href="/2023/12/13/bayesrays/" title="Reading notes on NeRF uncertainty quantification">
+								Reading notes on NeRF uncertainty quantification			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十二月 14日, 2023				
+								十二月 13日, 2023				
 							</p>
 							<p class="relate-post-content">
-								Rasterization
-The process of finding all the pixels in an image that are occupied by a geometric primitive is called ...
+								Baye’s NeRFNeRFs(Neural Radiance Fields) has inherently uncertainty. Quantifying these uncertainty is demanding. This...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2023/12/14/3DGs/" title="How to represent Geometry? - 3DGs">				
+							<a href="/2023/12/13/bayesrays/" title="Reading notes on NeRF uncertainty quantification">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="How to represent Geometry? - 3DGs"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Reading notes on NeRF uncertainty quantification"/>
 							</a>
 						</div>
 					</li>												
