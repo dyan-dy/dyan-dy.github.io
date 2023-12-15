@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      How to represent Geometry? - 3DGs | Se una notte d&#39;inverno un viaggiatore
+      Reading Notes on 3D Gaussian Splatting | Se una notte d&#39;inverno un viaggiatore
     
   </title>
   <meta name="author" content="Dongyu Gao">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「How to represent Geometry? - 3DGs」
+			「Reading Notes on 3D Gaussian Splatting」
 		
 	</p>
 
@@ -206,8 +206,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/12/14/3DGs/" itemprop="url">
-		How to represent Geometry? - 3DGs
+	<a href="/2023/12/15/3DGs2/" itemprop="url">
+		Reading Notes on 3D Gaussian Splatting
 	</a>
 
 		</div>
@@ -223,8 +223,8 @@
 
 	更新于
 
-	<a href="/2023/12/14/3DGs/" itemprop="url">
-		<time datetime="2023-12-14T21:04:05.719Z" itemprop="dateUpdated">
+	<a href="/2023/12/15/3DGs2/" itemprop="url">
+		<time datetime="2023-12-15T21:31:56.122Z" itemprop="dateUpdated">
 	  		2023-12-15
 	  </time>
 	</a> 
@@ -243,26 +243,21 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h1 id="Rasterization"><a href="#Rasterization" class="headerlink" title="Rasterization"></a>Rasterization</h1><blockquote>
-<p>The process of finding all the pixels in an image that are occupied by a geometric primitive is called rasterization. </p>
+			<p><a target="_blank" rel="noopener" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></p>
+<h1 id="Understanding-the-trick"><a href="#Understanding-the-trick" class="headerlink" title="Understanding the trick"></a>Understanding the trick</h1><blockquote>
+<p>Key to this performance is a novel 3D Gaussian scene representation coupled with a real-time differentiable renderer, which offers significant speedup to both scene optimization and novel view synthesis.</p>
 </blockquote>
-<p>—— <em><a target="_blank" rel="noopener" href="http://repo.darmajaya.ac.id/4242/1/Fundamentals%20of%20Computer%20Graphics%2C%20Fourth%20Edition%20%28%20PDFDrive%20%29.pdf">Fundamental of computer graphics, fourth edition, written by Steve Marschner, Peter Shirley, et al.</a></em> </p>
-<p>The main goal of rasterization is to project the 3D triangle into the project plane and pixelization it. A normal way of rasterization is using triangles. In this way the problem comes to, “is the pixel inside the triangle?”</p>
-<p>Triangle is the most basic polygon and it owns special property of planar-garanteed. In order to make sure our pixel is always in the triangle, we just need to use cross product to determine whether a point is located inside a triangle by representing the pixel as the barycenter of the triangle. </p>
-<p><img src="D:/DownloadedSoftware/hexo/source/images/4.PNG" alt="On triangle rasterization. 1 is to show the general idea of triangle rasterization. 2 is to show how to sample pixels in the triangle. 3 is to show the rule of how to determine whether pixel is inside the triangle or not."></p>
-<p>Check image 3 above, we can easily know that, </p>
-<p>$$ (AB \times AP) \cdot (BC \times BP) &gt; 0 $$<br>$$ (AB \times AP) \cdot (CA \times CP) &gt; 0$$<br>$$ (CA \times CP) \cdot (BC \times BP) &gt; 0$$</p>
-<p>, means that the pixel is inside the triangle.</p>
-<p><em>Image 1 and 2 are form <a target="_blank" rel="noopener" href="https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html">GAMES101: 现代计算机图形学入门</a>; image 3 is from <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/449289345">知乎专栏</a>.</em></p>
-<h1 id="Explicit-Implicit-Geometry"><a href="#Explicit-Implicit-Geometry" class="headerlink" title="Explicit&#x2F;Implicit Geometry"></a>Explicit&#x2F;Implicit Geometry</h1><p>In the explicit geometry, the shape can be directly described from vertex coordinates or equation of the boundary curve. While in implicit geometry, the shape is represented by implicit function(e.g., $x^2+y^2&#x3D;r^2$) without giving information about all point-coordinates on the circle.</p>
-<h1 id="3D-Gaussian"><a href="#3D-Gaussian" class="headerlink" title="3D Gaussian"></a>3D Gaussian</h1><p>The shape determined by a three-dimensional Gaussian distribution is an ellipsoid. This ellipsoid is symmetric along the x, y, and z axes, and the cross-sections cut from the perpendicular plane of these symmetric axes are ellipses (or circles).</p>
-<p>In the standard form of 3D Gaussians, </p>
-<p>$$ G_s(x) &#x3D; (\frac{1}{\sqrt{2\pi}^3 det(\Sigma)}e^{-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu)}) $$</p>
-<p>, $x&#x3D;[a,b,c]^T$ stands for 3D vector coordinates, $\mu$ stands for the center of the ellipsoid, the covariance matrix $\Sigma&#x3D;\begin{bmatrix}\sigma_{a}^2 &amp; Cov(a,b) &amp; Cov(a,c) \ Cov(b,a) &amp; \sigma_{b}^2 &amp; Cov(b,c) \ Cov(c,a) &amp; Cov(c,b) &amp; \sigma_{c}^{2}\end{bmatrix}$ controls the rotation and scale of the ellipsoid through 3 axes.</p>
-<h1 id="Splatting"><a href="#Splatting" class="headerlink" title="Splatting"></a>Splatting</h1><p>As we mentioned before, the principal goal traditional rasterization is to project the 3D triangle into the plane and pixelize it. However, the pipeline in modern GPU normally is already encapsulated, and we care more about what happens before and after rasterization. </p>
-<p>Splatting means project the 3D ellipsoid into 2D. The wording here is very vivid because normally we use “splatting” like throwing a snowball onto the wall, or the water drop dripping on the ground. </p>
-<p>This study note is structured based on <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/661569671">知乎专栏</a>.For more reading, there is a <a target="_blank" rel="noopener" href="https://github.com/chiehwangs/3d-gaussian-theory">github repository for understanding the 3D Gaussian Splatting</a>.</p>
-	
+<p>They have mentioned in the article before that 3D Gaussian can be used for representing ellipsoid in the world space. But things are more than that - we need to project our 3D Gaussians for 2D rendering. </p>
+<p>$$G(x) &#x3D; e^{-\frac{1}{2}(x)^{T\Sigma^{-1}(x)}}$$</p>
+<p>For projection, </p>
+<p>$$\Sigma^{‘} &#x3D; JW\Sigma W^T J^T$$</p>
+<p>, where J is the Jacobian of the affine approximation of the projective transformation. </p>
+<p>To revise, Jacobian matrix describes the local approximation of a multivariable function, here we want a linear affine.</p>
+<p>The covariance of 3D Gaussian is analogous to describing the configuration of an ellipsoid. Given a scaling matrix S and reotation matrix R, we can find the corresponding $\Sigma$.</p>
+<p>$$ \Sigma &#x3D; RSS^T R^T$$</p>
+<p>This 3D Gaussian is differentiable, for optimization, they choose SGD technique. The loss functino is L1 with D-SSIM term.</p>
+<h1 id="Understanding-the-optimization"><a href="#Understanding-the-optimization" class="headerlink" title="Understanding the optimization"></a>Understanding the optimization</h1><p>SfM should be initialized at the beginning. </p>
+<h1 id="Understanding-the-real-time-rendering"><a href="#Understanding-the-real-time-rendering" class="headerlink" title="Understanding the real-time rendering"></a>Understanding the real-time rendering</h1><h1 id="Under-and-Over-reconstruction"><a href="#Under-and-Over-reconstruction" class="headerlink" title="Under- and Over- reconstruction"></a>Under- and Over- reconstruction</h1>	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -280,12 +275,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2023/12/15/Alle%20Tage%20Abend/" title="Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2023/12/13/bayesrays/" title="Reading notes on NeRF uncertainty quantification" rel="next">
+			<a href="/2023/12/15/Buddahismliguistic/" title="佛教與古典漢語聲韻學" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -303,30 +294,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/12/15/3DGs2/" title="Reading Notes on 3D Gaussian Splatting">
-								Reading Notes on 3D Gaussian Splatting			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 15日, 2023				
-							</p>
-							<p class="relate-post-content">
-								3D Gaussian Splatting for Real-Time Radiance Field Rendering
-Understanding the trick
-Key to this performance is a nov...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/12/15/3DGs2/" title="Reading Notes on 3D Gaussian Splatting">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Reading Notes on 3D Gaussian Splatting"/>
-							</a>
-						</div>
-					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -395,6 +362,29 @@ Book Infomation:Alle Tage Abend(白日尽头)Author: Jenny ErpenbeckTranslator: 
 							<a href="/2023/12/15/Alle%20Tage%20Abend/" title="Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/12/14/3DGs/" title="How to represent Geometry? - 3DGs">
+								How to represent Geometry? - 3DGs			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十二月 14日, 2023				
+							</p>
+							<p class="relate-post-content">
+								Rasterization
+The process of finding all the pixels in an image that are occupied by a geometric primitive is called ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/12/14/3DGs/" title="How to represent Geometry? - 3DGs">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="How to represent Geometry? - 3DGs"/>
 							</a>
 						</div>
 					</li>												
