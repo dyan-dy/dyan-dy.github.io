@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      What do we need uncertainties for? | Dongyu&#39;s Blog
+      Neural Volumetric Rendering for CV | Dongyu&#39;s Blog
     
   </title>
   <meta name="author" content="Dongyu Gao">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「What do we need uncertainties for?」
+			「Neural Volumetric Rendering for CV」
 		
 	</p>
 
@@ -242,8 +242,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/12/11/uncertainty/" itemprop="url">
-		What do we need uncertainties for?
+	<a href="/2023/12/15/Reading/" itemprop="url">
+		Neural Volumetric Rendering for CV
 	</a>
 
 		</div>
@@ -259,9 +259,9 @@
 
 	更新于
 
-	<a href="/2023/12/11/uncertainty/" itemprop="url">
-		<time datetime="2023-12-11T21:38:06.228Z" itemprop="dateUpdated">
-	  		2023-12-12
+	<a href="/2023/12/15/Reading/" itemprop="url">
+		<time datetime="2023-12-15T10:47:52.240Z" itemprop="dateUpdated">
+	  		2023-12-15
 	  </time>
 	</a> 
 
@@ -279,41 +279,7 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>Uncertainty can be recognised as a nature in statistical learning. To get better understanding of such property of model learning behavior, we will parse the concept of uncertainty from the perspective of data distribution and learning stage. Then we will take image segmentation in medical scenario as an example to show how to better control uncertainty. Finally, we critically argue that we don’t need uncertainty all the time, and there is a trade off in between to decide if we pay attention to it or not.</p>
-<h2 id="Out-of-distribution-OOD-and-Zero-shot-learning"><a href="#Out-of-distribution-OOD-and-Zero-shot-learning" class="headerlink" title="Out of distribution(OOD) and Zero-shot learning"></a>Out of distribution(OOD) and Zero-shot learning</h2><p>The predictive uncertainty can be always represented as<br>$$ p(y|x,D) &#x3D; \int p(y|x,\theta)p(\theta, D) d\theta $$<br>,where y is the label, x is the sample, $\theta$ is the model parameter and D is the whole dataset. The predictive probability is decomposed into two parts based on the marginalization in Baysian inference. The posterior distribution we are really interested in is the predictive result of sample inside the dataset, but we have the information $\theta$ as condition in each learning steps - that is why we use conditioned multiply joint probability to get the outcome; and we call the conditioned probability here as learned uncertainty (also “aleatoric uncertainty”, prediction uncertainty) and deduced uncertainty(also “epistemic uncertainty”, model parameter uncertainty).</p>
-<p>Imagine a openset contains unseen category of data, in the model inference stage, the trained parameters are all learned from in-distribution data. Then we can say the principal uncertainty we are interested in here is the deduced uncertainty, which symbolically written as the joint distribution for training set and model parameters. </p>
-<p><a target="_blank" rel="noopener" href="https://paperswithcode.com/task/open-set-learning">Open-Set Learning</a> is a task under challenging and realistic setting, where there exist test samples from the classes that are unseen during training. <strong>Open set recognition (OSR)</strong> is the sub-task of detecting test samples which do not come from the training. <a target="_blank" rel="noopener" href="https://paperswithcode.com/task/ood-detection">Out-of-distribution(OOD) Detection</a> is the task of detecting instances that do not belong to the distribution the classifier has been trained on. OOD data is often referred to as “unseen” data, as the model has not encountered it during training. </p>
-<h2 id="Posthoc-vs-Online"><a href="#Posthoc-vs-Online" class="headerlink" title="Posthoc vs. Online"></a>Posthoc vs. Online</h2><p>Acquiring the uncertainty information and calibrating confidence can both happen as online or posthoc. The posthoc approach is simpler since the training stage remains stationary. While for the online calibration, we can either use a generative architecture(like VAE) in one training process, or train similar models with changing parameters stochastically and get ensemble uncertainty from sampled training trials(check <a target="_blank" rel="noopener" href="https://paperswithcode.com/paper/dropout-as-a-bayesian-approximation">Dropout as a Bayesian Approximation</a>). The latter one can be computationally expensive considering the ensemble. </p>
-<p>Comparatively, posthoc approach like temperature scaling or platt scalling can is more easier, yet we still need to fine-tune parameters into the best fit.</p>
-<h2 id="Example-medical-image-segmentation"><a href="#Example-medical-image-segmentation" class="headerlink" title="Example: medical image segmentation"></a>Example: medical image segmentation</h2><p>Under the medical scenario, the uncertainty can from different sources - like letting different expert to annotate same dataset, or model intrinsic uncertainty. If we want to get more reliable and robust segmentation result of the lesion and reduce ambiguity, we need take these uncertainty information into consideration. </p>
-<p>Potential approaches can be,</p>
-<ol>
-<li>Ensemble: <a target="_blank" rel="noopener" href="https://paperswithcode.com/paper/dropout-as-a-bayesian-approximation">Dropout as a Bayesian Approximation</a></li>
-<li>Probablistic model: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1806.05034">A Probabilistic U-Net for Segmentation of Ambiguous Images</a></li>
-<li>Label smoothing: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2104.05788">Spatially Varying Label Smoothing: Capturing Uncertainty from Expert Annotations</a></li>
-</ol>
-<p>Here label smoothing is to adjust the distribution of the label as a regularization term while training.</p>
-<p>For evaluation, expected common segmentation evaluation metrics for calculating segmentation accurary, normally we can use Expected Calibration Error(ECE) to get reliability graph. ECE measures the consistency between the predicted probabilities and the actual observed frequencies of events. ECE quantifies the difference between the model’s predicted probabilities and the empirical probabilities of events, providing an important measure of the calibration quality of probability predictions.</p>
-<h2 id="A-trade-off"><a href="#A-trade-off" class="headerlink" title="A trade off"></a>A trade off</h2><p>Approximation can be quite computationally expensive. Poor calibration of modern neural network is <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.04599">reported in 2017</a>. A intuitive thinking is, we need to find the trade of between traditional method and neural network method, and if we need uncertainty information or not, based on task property, data scale, computational resources and so on.</p>
-<!-- Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
-
-## Quick Start
-
-### Create a new post
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a> –&gt;</p>
-	
+			<h1 id="The-first-principle-of-Neural-Volumetric-Rendering"><a href="#The-first-principle-of-Neural-Volumetric-Rendering" class="headerlink" title="The first principle of Neural Volumetric Rendering"></a>The first principle of Neural Volumetric Rendering</h1><h1 id="History-of-image-based-rendering"><a href="#History-of-image-based-rendering" class="headerlink" title="History of image-based rendering"></a>History of image-based rendering</h1><h1 id="Inverse-graphics"><a href="#Inverse-graphics" class="headerlink" title="Inverse graphics"></a>Inverse graphics</h1><h1 id="Practices-and-coding-examples"><a href="#Practices-and-coding-examples" class="headerlink" title="Practices and coding examples"></a>Practices and coding examples</h1><h1 id="Challenges"><a href="#Challenges" class="headerlink" title="Challenges"></a>Challenges</h1>	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -331,10 +297,14 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2023/12/12/mono-sf/" title="Monocular Scene Flow Estimation" rel="prev">
+			<a href="/2023/12/15/Buddahismliguistic/" title="佛教與古典漢語聲韻學" rel="prev">
 				&laquo;上一篇
 			</a>
 		
+		
+			<a href="/2023/12/15/Alle%20Tage%20Abend/" title="Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)" rel="next">
+				下一篇&raquo;
+			</a>
 			
 	</span>
 
@@ -373,28 +343,6 @@
 							<a href="/2023/12/15/Buddahismliguistic/" title="佛教與古典漢語聲韻學">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="佛教與古典漢語聲韻學"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/12/15/Reading/" title="Neural Volumetric Rendering for CV">
-								Neural Volumetric Rendering for CV			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 15日, 2023				
-							</p>
-							<p class="relate-post-content">
-								The first principle of Neural Volumetric RenderingHistory of image-based renderingInverse graphicsPractices and codin...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/12/15/Reading/" title="Neural Volumetric Rendering for CV">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Neural Volumetric Rendering for CV"/>
 							</a>
 						</div>
 					</li>												
@@ -485,6 +433,28 @@ The process of finding all the pixels in an image that are occupied by a geometr
 							<a href="/2023/12/12/mono-sf/" title="Monocular Scene Flow Estimation">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Monocular Scene Flow Estimation"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/12/11/uncertainty/" title="What do we need uncertainties for?">
+								What do we need uncertainties for?			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十二月 11日, 2023				
+							</p>
+							<p class="relate-post-content">
+								Uncertainty can be recognised as a nature in statistical learning. To get better understanding of such property of mo...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/12/11/uncertainty/" title="What do we need uncertainties for?">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="What do we need uncertainties for?"/>
 							</a>
 						</div>
 					</li>												
