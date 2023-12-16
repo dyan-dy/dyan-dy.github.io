@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Neural Volumetric Rendering for CV | Se una notte d&#39;inverno un viaggiatore
+      Rank correlation | Se una notte d&#39;inverno un viaggiatore
     
   </title>
   <meta name="author" content="Dongyu Gao">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「Neural Volumetric Rendering for CV」
+			「Rank correlation」
 		
 	</p>
 
@@ -187,27 +187,14 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-	
-		<div class="layout-toc">
-			<div id="layout-toc">
-				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-			</div>
-		</div>
-
-		
-<script src="/plugin/toc/katelog.min.js"></script>
-
-
-		
 	 
 
 <div class="layout-post">
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/12/15/Reading/" itemprop="url">
-		Neural Volumetric Rendering for CV
+	<a href="/2023/12/16/rank/" itemprop="url">
+		Rank correlation
 	</a>
 
 		</div>
@@ -223,9 +210,9 @@
 
 	更新于
 
-	<a href="/2023/12/15/Reading/" itemprop="url">
-		<time datetime="2023-12-15T10:47:52.240Z" itemprop="dateUpdated">
-	  		2023-12-15
+	<a href="/2023/12/16/rank/" itemprop="url">
+		<time datetime="2023-12-16T10:38:50.842Z" itemprop="dateUpdated">
+	  		2023-12-16
 	  </time>
 	</a> 
 
@@ -243,7 +230,28 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h1 id="The-first-principle-of-Neural-Volumetric-Rendering"><a href="#The-first-principle-of-Neural-Volumetric-Rendering" class="headerlink" title="The first principle of Neural Volumetric Rendering"></a>The first principle of Neural Volumetric Rendering</h1><h1 id="History-of-image-based-rendering"><a href="#History-of-image-based-rendering" class="headerlink" title="History of image-based rendering"></a>History of image-based rendering</h1><h1 id="Inverse-graphics"><a href="#Inverse-graphics" class="headerlink" title="Inverse graphics"></a>Inverse graphics</h1><h1 id="Practices-and-coding-examples"><a href="#Practices-and-coding-examples" class="headerlink" title="Practices and coding examples"></a>Practices and coding examples</h1><h1 id="Challenges"><a href="#Challenges" class="headerlink" title="Challenges"></a>Challenges</h1>	
+			<p>In Spearman correlation, we consider a nonparametric measure of rank correlation, which is, statistical dependence between the rankings of two variables. Unlike Pearson correlation, Spearman correlation does not assume two group of data are sampled from Gaussian distribution. </p>
+<p>For two group of data X and Y (#X &#x3D; #Y &#x3D; n), we ranked these two groups as x_i, y_i (i&#x3D;1..n), x_bar, y_bar for the average of these two group of data. Then the Spearman correlation coefficient can be formulated as:</p>
+<p>$$\rho &#x3D; \frac{\Sigma_{i&#x3D;1}^{n}(x_{i}-\bar{x})(y_{i}-\bar{y})}{\sqrt{\Sigma_{i&#x3D;1}^{n}(x_{i}-\bar{x})^{2}\Sigma_{i&#x3D;1}^{n}(x_{i}-\bar{x})^{2}}} (1)$$ </p>
+<p>X_i &#x3D; {0.8, 18, 1.2, 2.3, 2.3}</p>
+<p>Then we ranked X_i with ascending order:</p>
+<p>X_i &#x3D; {0.8, 1.2, 2.3, 2.3, 18}</p>
+<p>rank &#x3D; {1, 2, 3, 4, 5}</p>
+<p>However we have the same value 2.3 here, so we get the average, </p>
+<p>rank_prime &#x3D; {1, 2, 3.5, 3.5, 5}.</p>
+<p>And we have,</p>
+<p>Y_i &#x3D; {7, 0, 27, 50, 28}</p>
+<p>after ranking ascendingly,</p>
+<p>Y_i &#x3D; {0, 7, 27, 28, 50}</p>
+<p>rank_y &#x3D; {1, 2, 3, 4, 5}</p>
+<p>Then we can calculate for these two groups of numbers, </p>
+<p>$$\rho &#x3D; \frac{\Sigma_{i&#x3D;1}^{5}(x_{i}-4.92)(y_{i}-22.4)}{\sqrt{\Sigma_{i&#x3D;1}^{5}(x_{i}-4.92)^{2}\Sigma_{i&#x3D;1}^{5}(x_{i}-22.4)^{2}}} &#x3D; -0.0513  $$</p>
+<p>, which is the Spearman rank correlation of two groups of number here. </p>
+<p><strong>Note 1</strong><br>We can also calculate the result with Python.<br><a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html">scipy.stats.spearmanr(a, b&#x3D;None, axis&#x3D;0, nan_policy&#x3D;’propagate’, alternative&#x3D;’two-sided’)</a></p>
+<p><strong>Note 2</strong><br>When all of the ranks are integers, the distance can be calculated as:<br>$$\rho &#x3D; 1 - \frac{\Sigma_{i&#x3D;1}^{n}d_{i}^{2}}{n(n^2-1)}(2)$$ </p>
+<p>,where d_i &#x3D; rank_x_i - rank_y_i</p>
+<p><strong>Note 3</strong><br>sometimes when ranks are not integer, for the consideration of complexity of calculation, we also use the (2), which might leads to differet result of calculation. Need to check source code for that. $\rho$ supposed to be [-1, 1].</p>
+	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -261,12 +269,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2023/12/15/Buddahismliguistic/" title="佛教與古典漢語聲韻學" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2023/12/15/Alle%20Tage%20Abend/" title="Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)" rel="next">
+			<a href="/2023/12/15/3DGs2/" title="Reading Notes on 3D Gaussian Splatting" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -284,28 +288,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/12/16/rank/" title="Rank correlation">
-								Rank correlation			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 16日, 2023				
-							</p>
-							<p class="relate-post-content">
-								In Spearman correlation, we consider a nonparametric measure of rank correlation, which is, statistical dependence be...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/12/16/rank/" title="Rank correlation">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Rank correlation"/>
-							</a>
-						</div>
-					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -353,6 +335,28 @@ Key to this performance is a nov...
 							<a href="/2023/12/15/Buddahismliguistic/" title="佛教與古典漢語聲韻學">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="佛教與古典漢語聲韻學"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/12/15/Reading/" title="Neural Volumetric Rendering for CV">
+								Neural Volumetric Rendering for CV			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十二月 15日, 2023				
+							</p>
+							<p class="relate-post-content">
+								The first principle of Neural Volumetric RenderingHistory of image-based renderingInverse graphicsPractices and codin...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/12/15/Reading/" title="Neural Volumetric Rendering for CV">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Neural Volumetric Rendering for CV"/>
 							</a>
 						</div>
 					</li>												
