@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      佛教與古典漢語聲韻學 | Se una notte d&#39;inverno un viaggiatore
+      How to select loss functions - MSE, Huber, MAE | Se una notte d&#39;inverno un viaggiatore
     
   </title>
   <meta name="author" content="Dongyu Gao">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「佛教與古典漢語聲韻學」
+			「How to select loss functions - MSE, Huber, MAE」
 		
 	</p>
 
@@ -187,14 +187,27 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
 	 
 
 <div class="layout-post">
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/12/15/Buddahismliguistic/" itemprop="url">
-		佛教與古典漢語聲韻學
+	<a href="/2023/12/17/loss%20function%20selection/" itemprop="url">
+		How to select loss functions - MSE, Huber, MAE
 	</a>
 
 		</div>
@@ -210,9 +223,9 @@
 
 	更新于
 
-	<a href="/2023/12/15/Buddahismliguistic/" itemprop="url">
-		<time datetime="2023-12-15T15:57:04.202Z" itemprop="dateUpdated">
-	  		2023-12-15
+	<a href="/2023/12/17/loss%20function%20selection/" itemprop="url">
+		<time datetime="2023-12-17T14:35:40.996Z" itemprop="dateUpdated">
+	  		2023-12-17
 	  </time>
 	</a> 
 
@@ -230,17 +243,32 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>在余光中先生《翻译乃大道》中提到，</p>
+			<p>Loss function selection is conditioned on different models and applied scenarios. This note is about pros&#x2F;cons of different loss functions and finding appropriate loss functions.</p>
+<h1 id="Loss-function-and-model-training"><a href="#Loss-function-and-model-training" class="headerlink" title="Loss function and model training"></a>Loss function and model training</h1><p>Loss function is used to measure the deviation between the mode’s predicted values, denotes as f(x), and the actual values, denoted as y. </p>
+<p>The basic requirements for loss function, is used to assess the proximity between the distribution of model outputs and the distribution of sample labels. </p>
+<p>The advanced requirements for loss function, is to accurately describe the proximity between the distribution of model outputs and sample labels, especially in situations where the sample distribution is uneven. </p>
+<p>The training process essentially involves optimizing the loss function to make f(x) as close as possible to y. It is the process of fitting model parameters and can be understood as the process of solving model parameters(e.g., using maximum likelihood estimation to solve parameters in probability models). This process is fundamentally similar to solving parameters in other mathematical modelling contexts.</p>
+<p>In pytorch, typically, loss function calculate the loss directly for batch data, returning a vector of dimensions equal to the batch size. </p>
+<p>A detail is, in <a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.html#loss-functions">pytoch loss function</a>, there are two parameters need to pay attention to - ‘reduce’ and ‘size_average’. </p>
 <blockquote>
-<p>翻译对文化可以发生重大的影响……没有翻译就没有《圣经》和佛典，也就不会有基督教和佛教。</p>
+<p>reduce (bool, optional) – Deprecated (see reduction). By default, the losses are averaged or summed over observations for each minibatch depending on size_average. When reduce is False, returns a loss per batch element instead and ignores size_average. Default: True</p>
 </blockquote>
-<p>翻譯是推動語言進化、發展、文化交流最直接的場域。在一些漢學家的觀點看來，亞洲大陸與歐洲的海洋文明不同，亞洲大陸的文明傳播主要不是依靠旅行，而是依靠書籍。在中國耳熟能詳的明清小説《西游記》中，玄奘西游天竺（今印度），師徒四人歷經九九八十一難拿到佛經寶典；而在印度神話中也有“猴子”的意象，其閒具體關係筆者未考。但宗教典籍從一種語言、文明傳播到另一語言、文明之中，語言障礙是最難剋服的障礙之一。因爲佛教教義具有口口相傳的特性，與此同時學者們需要文字載體來記載並保存其中信息，因而佛教的傳入在文字、語音（音韻）、語義（訓詁）三門“小學”科目中均起到了極大的推動作用。</p>
-<p>漢字是一種單音節表意文字，因而雖然雙聲、叠韻現象早在佛教傳入之前就已經被廣爲運用，標音方式也已經發展出諸如讀若等方法，但尚未系統化、科學化。可以説，漢語音韻研究的系統化起源於古印度佛教文化的東漸。反切法便是其中最爲顯著的一個貢獻。</p>
-<p>中古漢語語音系統的建立離不開《切韻》。以“東”爲例，“東，德紅切”，便是一個反切注音的典型。反切上字取其聲，反切下字取其韻和聲調，拼合即可得到讀音。一些學者認爲這樣的注音方法收到了梵語中輔音和母音相拼而成的啓迪。亦有一些學者認爲秦漢時期已有可考的反切思想的萌芽，梵語不是最原初的啓迪。</p>
-<p>在對外漢語教學的過程中，聲調往往是學生需要剋服的一個難題。漢語四聲的分類也可以從佛教中窺見綫索。梵語聲明學（即爲今天的“語言學”）中有“三聲”之説，誦讀經書的時候三聲體系（平、上、去）傳入漢文，但人們慢慢發現漢語中有一種更爲特殊的音質：更爲短促，韻尾以濁塞音迅速無聲結束（瑞典漢學家高本漢在《中國音韻學研究》中記錄了這一現象；後續學者們在閩南語和粵語使用者中，通過肌電也發現了入聲語音的生理基礎）。因此漢語語音學中“四聲”的認知形成，“平、上、去、入”。</p>
-<p>至此，漢語音韻學建立了對於單字系統“聲、韻、調”的認知和“平、上、去、入”的理論。</p>
-<p>在漢語古典語音學體系中，反切上字和下字被稱爲“紐”；上字“字母”之稱則來自於佛教《華嚴經》。宋代學者守溫創立了三十六字母系統，影響深遠。一説韻圖也來自於古印度對兒童進行語言教學的梵文拼音表：我國最早的等韻圖《韻鏡》，是研究聲韻學必不可少的工具材料。</p>
-<p>音韻學是一門極爲艱深複雜的冷門絕學，僅靠本科三個學分的基礎不能支撐起音韻學的一角。謹以此文作爲小記。</p>
+<blockquote>
+<p>size_average (bool, optional) – Deprecated (see reduction). By default, the losses are averaged over each loss element in the batch. Note that for some losses, there are multiple elements per sample. If the field size_average is set to False, the losses are instead summed for each minibatch. Ignored when reduce is False. Default: True</p>
+</blockquote>
+<h1 id="MSE-MAE-Huber"><a href="#MSE-MAE-Huber" class="headerlink" title="MSE, MAE, Huber"></a>MSE, MAE, Huber</h1><h2 id="MSE"><a href="#MSE" class="headerlink" title="MSE"></a>MSE</h2><p>$$loss(x_{i}, y_{i}) &#x3D; (x_{i} - y_{i})^2$$</p>
+<p>MSE curves are smooth, continuous, and differentiable, making it suitable for use with gradient descent algorithms. The squaring operation here provides MSE a feature, which is, to penalize larger errors(&gt;1) more severly and imposes smaller penalties on smaller errors(&lt;1). </p>
+<p>So the advantages for MSE is, as error decreases, the gradient also decreases, facilitating the convergence of the function. Even with a fixed learning rate, the function can converge quickly to the minimum value.</p>
+<p>Disadvantages are, MSE is very sensitive to outliers - from a training perspective, the model tends to heavily penalize larger points, assigning them greater weight and neglecting the impact of smaller points. This inability to handle outliers may lead to the exploding gradient problem. If there are outliers in the sample， MSE assigns higher weights to these outliers at the expense of sacrificing the predictive performance on the normal data points, resulting in a decrease in the overall performance of the model.</p>
+<p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html">pytorch MSELoss</a></p>
+<h2 id="MAE"><a href="#MAE" class="headerlink" title="MAE"></a>MAE</h2><p>MAE stands for Mean Absolute Error, </p>
+<p>$$MAE &#x3D; \frac{1}{n} * \Sigma_{i&#x3D;1}^{n} |y_{i} - y_{i}^{pred}|$$</p>
+<p>It is continuous but not differentiable at y&#x3D;f(x), so it can be tricky for computation. In most cases, the gradients of MAE are equal, indicating that even small loss values, the gradients can be large and not conducive to the convergence of the function and model learning.</p>
+<p>The advantage of MAE is, it is less sensitive to outliers considering the same penalty. Fitting a line with MAE can better represent the distribution of normal data, exhibiting better robustness.</p>
+<p>Disadvantages are,</p>
+<p>The gradients in MAE training are consistently large, and it is continuous but not differentiable at the point 0. This implies that even for small loss values, the gradients are large. This is unfavorable for the convergence of the function and model learning, resulting in a slow learning speed and the possibility of missing global minimum when training the model using gradient descent.</p>
+<p>The implement of MAE can use <a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.L1Loss.html">torch.nn.L1loss</a>, choosing reduction&#x3D;mean.</p>
+<h2 id="Huber"><a href="#Huber" class="headerlink" title="Huber"></a>Huber</h2><p>Huber is the combination of MAE and MSE. Then it can be less sensitive to outliers also differentiable everywhere. It converges faster than MAE as well. However choosing $\delta$ needs cross-validation and it is critical to training effect.</p>
 	
 		</div>
 		
@@ -259,12 +287,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2023/12/15/3DGs2/" title="Reading Notes on 3D Gaussian Splatting" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2023/12/15/Reading/" title="Neural Volumetric Rendering for CV" rel="next">
+			<a href="/2023/12/16/rank/" title="Rank correlation" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -347,29 +371,6 @@ Key to this performance is a nov...
 							<a href="/2023/12/15/Reading/" title="Neural Volumetric Rendering for CV">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Neural Volumetric Rendering for CV"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/12/15/Alle%20Tage%20Abend/" title="Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)">
-								Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 15日, 2023				
-							</p>
-							<p class="relate-post-content">
-								
-Book Infomation:Alle Tage Abend(白日尽头)Author: Jenny ErpenbeckTranslator: 胡烨（Hu Ye）Publisher: 云南人民出版社&#x2F;理想国Time: Oc...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/12/15/Alle%20Tage%20Abend/" title="Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Alle Tage Abend by Jenny Erpenberk (Literature Translation DE-CN_ZH)"/>
 							</a>
 						</div>
 					</li>												
@@ -505,6 +506,17 @@ The process of finding all the pixels in an image that are occupied by a geometr
 </div>
 
 <!-- show math formula -->
+
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config(
+			{ 
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']]
+				} 
+			}
+		);
+	</script>
 
 
 
