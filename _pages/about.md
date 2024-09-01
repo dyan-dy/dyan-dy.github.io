@@ -11,11 +11,13 @@ My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Piny
 
 Drawing on my interdisciplinary background, I affirm the importance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional Knowledge Production, and Global South Epistemologies. 
 
-I completed my bachelor's thesis under the supervision of [Prof. Xiao-Chun Huang](https://ling.whu.edu.cn/view/23595.html) and my master's thesis under [Prof. Serge Belongie](https://sergebelongie.github.io/). 
+I completed my bachelor's thesis under the supervision of [Prof. Xiao-Chun Huang](https://ling.whu.edu.cn/view/23595.html) and my master's thesis in [Belongie's Lab](https://www.belongielab.org/), where I received very hands-on support from [Dr. Dan Wang](https://danalaina.github.io/) and [Dr. Nico Lang](https://langnico.github.io/). I am deeply grateful for their patience and guidance throughout my research.
 
-My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer open questions on:
+My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, generative probablistic learning, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer open questions on:
+
 - re-evaluating knowledge inside large models, 
-- spatial information perception of intelligent agent with multi-modality,
+- spatial perception of intelligence agent,
+- multi-modality alignment, 
 - memory efficient computing.  
 
 
