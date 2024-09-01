@@ -21,14 +21,14 @@ repository               : "dyan-dy/dyan-dy.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "profile_dy.png"
+  name             : "Dong-Yu Gao"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Msc@University of Copenhagen; BA@Wuhan University"
+  location         : "Copenhagen"
+  employer         : "University of Copenhagen"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "dongyu.gao.dy@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
