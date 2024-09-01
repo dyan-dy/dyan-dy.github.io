@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Pinyin: Dong55-Yu214 Gao55, Wade–Giles: Tung Yü Kao, IPA: tʊŋ55-y214 kɑʊ55). I hold my bachelor's degree from [School of Chinese Langugage and Literature](https://chinese.whu.edu.cn/), [Wuhan University](https://en.whu.edu.cn/), with a minor from [Mathematics](https://maths.whu.edu.cn/Englishversion/). Then I get my masters degree from [IT and Cognition,  University of Copenhagen](https://studies.ku.dk/masters/it-and-cognition/). 
+My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Pinyin: Dong55-Yu214 Gao55, Wade–Giles: Tung Yü Kao, IPA: tʊŋ55-y214 kɑʊ55). I hold my bachelor's degree from [School of Chinese Langugage and Literature](https://chinese.whu.edu.cn/), [Wuhan University](https://en.whu.edu.cn/), with a minor from [Mathematics](https://maths.whu.edu.cn/Englishversion/). Then I get my masters degree from [IT and Cognition,  University of Copenhagen](https://studies.ku.dk/masters/it-and-cognition/).
 
 Drawing on my interdisciplinary background, I affirm the importance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional Knowledge Production, and Global South Epistemologies. 
 
