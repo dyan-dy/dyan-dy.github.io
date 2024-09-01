@@ -7,7 +7,16 @@ redirect_from:
   - /about.html
 ---
 
-My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Pinyin: Dong55-Yu214 Gao55, Wade–Giles Pinyin: Tung Yü Kao). I hold my bachelor's degree from [School of Chinese Langugage and Literature](https://chinese.whu.edu.cn/), [Wuhan University](https://en.whu.edu.cn/), with a minor from [Mathematics](https://maths.whu.edu.cn/Englishversion/). 
+My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Pinyin: Dong55-Yu214 Gao55, Wade–Giles: Tung Yü Kao, IPA: tʊŋ55-y214 kɑʊ55). I hold my bachelor's degree from [School of Chinese Langugage and Literature](https://chinese.whu.edu.cn/), [Wuhan University](https://en.whu.edu.cn/), with a minor from [Mathematics](https://maths.whu.edu.cn/Englishversion/). Then I get my masters degree from [IT and Cognition,  University of Copenhagen](https://studies.ku.dk/masters/it-and-cognition/). 
+
+Drawing on my interdisciplinary background, I affirm the importance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional Knowledge Production, and Global South Epistemologies. 
+
+I did my bachelor's thesis under the supervision of [Prof. Xiao-Chun Huang](https://ling.whu.edu.cn/view/23595.html) and my masters thesis of [Prof. Serge Belongie](https://sergebelongie.github.io/). 
+
+My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer scientific questions on:
+- re-evaluating knowledge inside large models, 
+- spatial information perception of intelligent agent with multi-modality input. 
+
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io). -->
 
