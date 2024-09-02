@@ -27,7 +27,7 @@ I believe knowledge extends beyond academia and value innovative technology ecos
 
 Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https://jura.ku.dk/legaltechlab/) and [KU Lighthouse](https://lighthouse.ku.dk/), our team ranked first for two consecutive years in the hackathon events. By incorporating multi-dimensional perspectives from Legal Compliance, Financial Instruments, Regional Policies, and Cutting-edge Technology, we provided innovative solutions in the fields of Decentralized Finance and Sustainable Development.
 
-Drawing on my interdisciplinary background, I affirm the significance of Epistemic Pluralism and Global South Epistemologies.
+Drawing on my interdisciplinary background, I affirm the significance of Transplatform Knowledge Production, Epistemic Pluralism and Global South Epistemologies.
 
 <!-- Drawing on my interdisciplinary background, I value the significance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional/Transorganizational/Transplatform Knowledge Production, and Global South Epistemologies.  -->
 
