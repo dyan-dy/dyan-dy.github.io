@@ -17,7 +17,7 @@ Education
 
 Intenship/Part-time
 ======
-* Spring 2024: Belongie's Lab, [Pioneer Center for AI](https://www.aicentre.dk/), University of Copenhagen
+* Spring 2024: Belongie's Lab, University of Copenhagen, [Pioneer Center for AI](https://www.aicentre.dk/)
   * Teaching Assistant
   * Thesis Student
 
