@@ -8,3 +8,4 @@ date: 2023-01-01
 location: "Copenhagen, Denmark"
 ---
 
+More Info: [NDAK12002U Vision and Image Processing (VIP)](https://kurser.ku.dk/course/ndak12002u)
