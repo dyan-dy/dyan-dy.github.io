@@ -1,5 +1,5 @@
 ---
-title: " Shared Notes | 2024Fall Algorithm Interview Preparation"
+title: " Shared Notes \| 2024Fall Algorithm Interview Preparation"
 excerpt: "Here, we share extensive experience with the structure, training, and hyperparameter tuning of frequently used models. <br/><img src='/images/Picture1.png'>"
 collection: portfolio
 ---
