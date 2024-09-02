@@ -15,11 +15,15 @@ Education
 * M.Sc. in Copenhagen, University of Copenhagen, 2024
 * B.A. in Wuhan, Wuhan University, 2022
 
-Intenship
+Intenship/Part-time
 ======
-* Spring 2021: GE Healthcare
-  * R&D in Internet Hospital Project, hierachical medical image/data pipeline management and processing for local hospitals, aged-friendly interface design for emergency help and welfare management.
+* Spring 2024: Belongie's Lab, University of Copenhagen
+  * Teaching Assistant
+  * Thesis Student
 
 * Spring 2022: Novozymes
-  * Business Strategy
+  * Marketing and Business Strategy
+
+* Spring 2021: GE Healthcare
+  * R&D in Internet Hospital Project, hierachical medical image/data pipeline management and processing for local hospitals, aged-friendly interface design for emergency help and welfare management.
   
