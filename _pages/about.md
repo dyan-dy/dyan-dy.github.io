@@ -16,7 +16,7 @@ I completed my bachelor's thesis under the supervision of [Prof. Xiao-Chun Huang
 My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, probabilistic generative learning, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer open questions on:
 
 + re-evaluating knowledge inside large models, 
-+ spatial perception of intelligence agent,
++ temporal-spatial perception of intelligence agent,
 + multi-modality alignment, 
 + memory efficient computing.  
 
