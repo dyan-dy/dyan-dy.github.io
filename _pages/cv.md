@@ -17,8 +17,8 @@ Education
 
 Intenship
 ======
-* Spring 2021: Generic Technology
-  * R&D in Internet Hospital Project
+* Spring 2021: GE Healthcare
+  * R&D in Internet Hospital Project, hierachical medical image/data pipeline management and processing for local hospitals, aged-friendly interface design for emergency help and welfare management.
 
 * Spring 2022: Novozymes
   * Business Strategy
