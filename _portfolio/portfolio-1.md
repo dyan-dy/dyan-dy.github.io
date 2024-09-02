@@ -1,6 +1,6 @@
 ---
 title: " Shared Notes | 2024Fall Algorithm Interview Preparation"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "Here, we share extensive experience with the structure, training, and hyperparameter tuning of frequently used models. <br/><img src='/images/Picture1.png'>"
 collection: portfolio
 ---
 
