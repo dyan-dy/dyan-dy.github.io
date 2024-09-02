@@ -9,8 +9,6 @@ redirect_from:
 
 My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Pinyin: Dong55-Yu214 Gao55, Wade–Giles: Tung Yü Kao, IPA: tʊŋ55-y214 kɑʊ55). I hold my bachelor's degree from [School of Chinese Langugage and Literature](https://chinese.whu.edu.cn/), [Wuhan University](https://en.whu.edu.cn/), with 49 credits from [Mathematics](https://maths.whu.edu.cn/Englishversion/). Then I got my masters degree from [IT and Cognition,  University of Copenhagen](https://studies.ku.dk/masters/it-and-cognition/).
 
-Drawing on my interdisciplinary background, I affirm the importance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional/Transorganizational/Transplatform Knowledge Production, and Global South Epistemologies. 
-
 I completed my bachelor's thesis under the supervision of [Prof. Xiao-Chun Huang](https://www.facebook.com/LiuHua.my/videos/434242447669805/) and my master's thesis in [Belongie's Lab](https://www.belongielab.org/), where I received very hands-on support from [Dr. Dan Wang](https://danalaina.github.io/) and [Dr. Nico Lang](https://langnico.github.io/). I am deeply grateful for their patience and guidance throughout my study and research.
 
 My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, probabilistic generative learning, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer open questions on:
@@ -28,6 +26,8 @@ Tech4Good
 I believe knowledge extends beyond academia and value innovative technology ecosystem. By actively applying it into real-world and leveraging efficient teamwork, we can echo and address societal challenges.
 
 Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https://jura.ku.dk/legaltechlab/) and [KU Lighthouse](https://lighthouse.ku.dk/), our team ranked first for two consecutive years in the hackathon events. By incorporating multi-dimensional perspectives from Legal Compliance, Financial Instruments, Regional Policies, and Cutting-edge Technology, we provided innovative solutions in the fields of Decentralized Finance and Sustainable Development.
+
+Drawing on my interdisciplinary background, I value the significance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional/Transorganizational/Transplatform Knowledge Production, and Global South Epistemologies. 
 
 
 <!-- Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge. -->
