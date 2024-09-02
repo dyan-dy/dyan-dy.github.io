@@ -25,7 +25,7 @@ My previous experience lies in Natural Language Processing(NLP) and 3D Computer 
 
 Tech4Good
 ======
-I believe knowledge extends beyond academia and value innovative technology ecosystem. By actively applying it into real-world and leveraging efficient teamwork, we can echo and addressed societal challenges.
+I believe knowledge extends beyond academia and value innovative technology ecosystem. By actively applying it into real-world and leveraging efficient teamwork, we can echo and address societal challenges.
 
 Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https://jura.ku.dk/legaltechlab/) and [KU Lighthouse](https://lighthouse.ku.dk/), our team ranked first for two consecutive years in the hackathon events. By incorporating multi-dimensional perspectives from Legal Compliance, Financial Instruments, Regional Policies, and Cutting-edge Technology, we provided innovative solutions in the fields of Decentralized Finance and Sustainable Development.
 
