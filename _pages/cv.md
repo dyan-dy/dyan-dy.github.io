@@ -18,7 +18,7 @@ Education
 Intenship/Part-time
 ======
 * Spring 2024: Belongie's Lab, University of Copenhagen, [Pioneer Center for AI](https://www.aicentre.dk/)
-  * Teaching Assistant
+  * Teaching Assistant  
   * Thesis Student
 
 * Spring 2022: Novozymes
@@ -27,3 +27,9 @@ Intenship/Part-time
 * Spring 2021: GE Healthcare
   * R&D in Internet Hospital Project, hierachical medical image/data pipeline management and processing for local hospitals, aged-friendly interface design for emergency help and welfare management.
   
+Communication
+======
+Mandarin Chinese: Native  
+English: Fluent  
+German: Business Intermediate  
+Danish: Limited Proficiency (Daily)
