@@ -4,8 +4,25 @@ _site/
 # Ignore the directory for local files during development
 local/
 
-# Ignore assest files
+# Ignore assest folders and files
+_data/
 _drafts/
+_includes/
+_layouts/
+_pages/
+_portfolio/
+_posts/
+_publications/
+_sass/
+_talks/
+_teaching/
+assests/
+files/
+images/
+markdown_generator/
+talkmap/
+
+
 
 # Ignore the Gemfile that is generated
 Gemfile.lock
