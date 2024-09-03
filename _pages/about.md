@@ -9,7 +9,7 @@ redirect_from:
 
 My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Pinyin: Dong55-Yu214 Gao55, Wade–Giles: Tung Yü Kao, IPA: tʊŋ55-y214 kɑʊ55). I hold my bachelor's degree from [School of Chinese Langugage and Literature](https://chinese.whu.edu.cn/), [Wuhan University](https://en.whu.edu.cn/), with minor from [Mathematics](https://maths.whu.edu.cn/Englishversion/). Then I got my masters degree from [IT and Cognition,  University of Copenhagen](https://studies.ku.dk/masters/it-and-cognition/).
 
-I completed my bachelor's thesis under the supervision of [Prof. Xiao-Chun Huang](https://ling.whu.edu.cn/view/23595.html) and my master's thesis in [Belongie's Lab](https://www.belongielab.org/), where I received very hands-on support from Dr. Dan Wang and Dr. Nico Lang. I am deeply grateful for their patience and guidance throughout my study and research.
+I completed my bachelor's thesis under the supervision of [Prof. Xiao-Chun Huang](https://ling.whu.edu.cn/view/23595.html) and my master's thesis in [Belongie's Lab](https://www.belongielab.org/) affiliated with [Pioneer Center for AI](https://www.aicentre.dk/) and [Department of Computer Science, DIKU](https://di.ku.dk/english/), where I received very hands-on support from Dr. Dan Wang and Dr. Nico Lang. I am deeply grateful for their patience and guidance throughout my study and research.
 
 My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, probabilistic generative learning, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer open questions on:
 
@@ -27,7 +27,7 @@ I believe knowledge extends beyond academia and value innovative technology ecos
 
 Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https://jura.ku.dk/legaltechlab/) and [KU Lighthouse](https://lighthouse.ku.dk/), our team ranked first for two consecutive years in the hackathon events. By incorporating multi-dimensional perspectives from Legal Compliance, Financial Instruments, Regional Policies, and Cutting-edge Technology, we provided innovative solutions in the fields of Decentralized Finance and Sustainable Development.
 
-Drawing on my interdisciplinary background, I am aware of Transplatform Knowledge Production, and value the significance of Epistemic Pluralism and Global South Epistemologies. To put this into practice, I am glad to leverage my personal experience and resources to voluntarily help junior students, especially those from underprivileged groups (e.g., students from underdeveloped areas, non-upper class backgrounds, or those with impairments and accessible needs, etc.), to overcome information and skill gaps, as well as cultural and language barriers.
+Drawing on my interdisciplinary background, I am aware of Transplatform Knowledge Production, and value the significance of Epistemic Pluralism and Global South Epistemologies. To put this into practice, I am glad to leverage my personal experience and resources to voluntarily help junior students, especially those from underprivileged groups, to overcome information/skill gaps and cultural/language barriers.
 
 <!-- Drawing on my interdisciplinary background, I value the significance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional/Transorganizational/Transplatform Knowledge Production, and Global South Epistemologies.  -->
 
