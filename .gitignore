@@ -6,7 +6,6 @@ local/
 
 # Ignore assest folders and files
 _drafts/
-_pages/
 _portfolio/
 _posts/
 _publications/
