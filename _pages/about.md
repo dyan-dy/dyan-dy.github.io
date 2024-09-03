@@ -30,10 +30,9 @@ Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https:/
 
 Drawing on my interdisciplinary background, I am aware of Transplatform Knowledge Production, and value the significance of Epistemic Pluralism and Global South Epistemologies. To put this into practice, I am glad to leverage my personal experience and resources to voluntarily help junior students, especially those from underprivileged groups, to overcome information/skill gaps and cultural/language barriers.
 
-<video controls width="100%" height="auto">
+<!-- <video controls width="100%" height="auto" title="Potential Impact on Rural Green Transformation, Renewable Energy, and Societal Equality">
   <source src="https://mpvideo.qpic.cn/0b2eaeaayaaa2makhgowjntfaaodbqaqadaa.f10002.mp4?dis_k=7fb2ee4fb2cfddbf1fbf0f654e58ef3c&dis_t=1725350383&play_scene=10120&auth_info=IsOhsOMLMWZos+bboloPZDVVeDw/TBY2Zxh7N2IeI2QZZgACPgNsCQoqfm4DfhhePw==&auth_key=593d41c21fb3b4625ae0b5b1f54f414c&vid=wxv_3619742659469639690&format_id=10002&support_redirect=0&mmversion=false" type="video/mp4">
-  Copyright: UNWomen
-</video>
+</video> -->
 
 <!-- Drawing on my interdisciplinary background, I value the significance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional/Transorganizational/Transplatform Knowledge Production, and Global South Epistemologies.  -->
 
