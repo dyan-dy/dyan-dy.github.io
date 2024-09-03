@@ -29,7 +29,7 @@ Intenship/Part-time
   
 Communication
 ======
-Mandarin Chinese: Native  
+Mandarin: Native  
 English: Fluent  
 German: Business Intermediate  
 Danish: Limited Proficiency (Daily)
