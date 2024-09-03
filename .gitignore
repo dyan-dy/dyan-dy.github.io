@@ -6,7 +6,6 @@ local/
 
 # Ignore assest files
 _drafts/
-_posts/
 
 # Ignore the Gemfile that is generated
 Gemfile.lock
