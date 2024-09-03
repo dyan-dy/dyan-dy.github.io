@@ -11,7 +11,7 @@ My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Piny
 
 I completed my bachelor's thesis under the supervision of [Prof. Xiao-Chun Huang](https://ling.whu.edu.cn/view/23595.html) and my master's thesis in [Belongie's Lab](https://www.belongielab.org/) affiliated with [Pioneer Center for AI](https://www.aicentre.dk/) and [Department of Computer Science, DIKU](https://di.ku.dk/english/), where I received very hands-on support from Dr. Dan Wang and Dr. Nico Lang. I am deeply grateful for their patience and guidance throughout my study and research.
 
-My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, probabilistic generative learning, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer open questions on:
+My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, probabilistic generative models, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer open questions on:
 
 + re-evaluating knowledge inside large models, 
 + temporal-spatial perception of intelligence agent,
