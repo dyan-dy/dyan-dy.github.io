@@ -16,14 +16,10 @@ _publications/
 _sass/
 _talks/
 _teaching/
-assests/
 files/
 images/
 markdown_generator/
 talkmap/
-_config.yml
-
-
 
 # Ignore the Gemfile that is generated
 Gemfile.lock
