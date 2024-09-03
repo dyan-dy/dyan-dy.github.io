@@ -5,10 +5,7 @@ _site/
 local/
 
 # Ignore assest folders and files
-_data/
 _drafts/
-_includes/
-_layouts/
 _pages/
 _portfolio/
 _posts/
@@ -17,8 +14,6 @@ _talks/
 _teaching/
 files/
 images/
-markdown_generator/
-talkmap/
 
 # Ignore the Gemfile that is generated
 Gemfile.lock
