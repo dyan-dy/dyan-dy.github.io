@@ -32,5 +32,5 @@ Communication
 Mandarin Chinese: Native  
 English: Fluent  
 German: Business Intermediate  
-Danish: Limited Proficiency (Daily)
+
 
