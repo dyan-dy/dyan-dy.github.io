@@ -31,6 +31,6 @@ Communication
 ======
 Mandarin Chinese: Native  
 English: Fluent  
-German: Business Intermediate  
+German: Intermediate  
 
 
