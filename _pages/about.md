@@ -18,20 +18,22 @@ My previous experience lies in Natural Language Processing(NLP) and 3D Computer 
 + multi-modality alignment, 
 + memory efficient computing.  
 
-And also for downstream applications e.g. cultural heritage protection (Silk Road DunHuang, Central Axis, Paleography, etc.).
-
-<!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io). -->
-
 Tech4Good
 ======
 I believe knowledge extends beyond academia and value innovative technology ecosystem. By actively applying it into real-world and leveraging efficient teamwork, we can echo and address societal challenges.
 
 Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https://jura.ku.dk/legaltechlab/) and [KU Lighthouse](https://lighthouse.ku.dk/), our team ranked first for two consecutive years in the hackathon events. By incorporating multi-dimensional perspectives from Legal Compliance, Financial Instruments, Regional Policies, and Cutting-edge Technology, we provided innovative solutions in the fields of Decentralized Finance and Sustainable Development.
 
-Drawing on my interdisciplinary background, I am aware of Transplatform Knowledge Production, and value the significance of Epistemic Pluralism and Global South Epistemologies. To put this into practice, I am glad to leverage my personal experience and resources to voluntarily help junior students, especially those from underprivileged groups, to overcome information/skill gaps and cultural/language barriers.
+With a passion for interdisciplinarity and a commitment to epistemic pluralism, I am keen to support junior students, particularly those from underprivileged backgrounds. I am actively seeking opportunities to bridge information and skill gaps and to address cultural and language barriers. My journey is one of continuous learning and collaboration, and I look forward to contributing to a more inclusive educational landscape.
+
+If you want to schedule time for meeting,
+
+<div style="position: relative; padding-bottom: 75%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="https://calendar.google.com/calendar/embed?src=31dcd3c50725904f983d9359e9b4a489b1c5fc46c053a8f28aee56b52a6663e2%40group.calendar.google.com&ctz=Asia%2FShanghai" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0" frameborder="0" scrolling="no"></iframe>
+</div>
 
 
-<!-- Drawing on my interdisciplinary background, I value the significance of Epistemic Pluralism, which encompasses concepts such as Decoloniality, Multilingualism, Pluriversality, Transcultural/Transregional/Transorganizational/Transplatform Knowledge Production, and Global South Epistemologies.  -->
+<!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io). -->
 
 
 <!-- Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge. -->
