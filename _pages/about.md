@@ -26,7 +26,7 @@ Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https:/
 
 With a passion for Open-source transplatform knowledge production and a commitment to Epistemic Pluralism and Global South Epistemology, I am keen to support junior students, particularly those from underprivileged backgrounds. I am actively seeking opportunities to bridge information and skill gaps and to address cultural and language barriers. My journey is one of continuous learning and collaboration, and I look forward to contributing to a more inclusive educational landscape.
 
-If you want to schedule time for meeting,
+To schedule our meeting, please check my availability on the calendar and propose a time that suits you.
 
 <div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
   <iframe src="https://calendar.google.com/calendar/embed?src=31dcd3c50725904f983d9359e9b4a489b1c5fc46c053a8f28aee56b52a6663e2%40group.calendar.google.com&ctz=Asia%2FShanghai" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0" frameborder="0" scrolling="no"></iframe>
