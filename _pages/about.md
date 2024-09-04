@@ -11,9 +11,6 @@ My name is Dong-Yu Gao (Simplified Chinese Characters: 高 东宇, Mandarin Piny
 
 I completed my bachelor's thesis in the field of computational linguistics* under the supervision of [Prof. Xiao-Chun Huang](https://ling.whu.edu.cn/view/23595.html); and my master's thesis in [Belongie's Lab](https://www.belongielab.org/) affiliated with [Pioneer Center for AI](https://www.aicentre.dk/) and [Department of Computer Science, DIKU](https://di.ku.dk/english/), where I received hands-on support from Dr. Dan Wang and Dr. Nico Lang. I am deeply grateful for their patience and guidance throughout my study and research.
 
-<small><em>*Here is more information in case [you don't know too much about the field](https://aclweb.org/aclwiki/Frequently_asked_questions_about_Computational_Linguistics), [example for why it is crucial to take a language-specific perspective and risk of over-generalization](https://arxiv.org/pdf/1901.06079), and [the collective effort on  protection of dialect/minority/endangered language resources and raising visibility for minority language speakers in social/legal/business/educational/emergency situations](https://www.eldp.net/).</em></small>
-
-
 My previous experience lies in Natural Language Processing(NLP) and 3D Computer Vision(3DCV). With the skillset of machine learning, deep neural network, probabilistic generative models, neural radiance field(NeRFs) and computer graphics, I am always open to find collaboration to answer open questions on:
 
 + re-evaluating knowledge inside large models, 
@@ -22,6 +19,8 @@ My previous experience lies in Natural Language Processing(NLP) and 3D Computer 
 + memory efficient computing.  
 
 When taking on a project, I focus on establishing a clear understanding of the objectives and motivations, followed by a collaborative development of a structured framework. We'll set up proof-of-concept milestones and maintain a steady, interactive approach to achieve our goals, ensuring a smooth and efficient project progression.
+
+<small><em>*Here is more information in case [you don't know too much about the field](https://aclweb.org/aclwiki/Frequently_asked_questions_about_Computational_Linguistics), [example for why it is crucial to take a language-specific perspective and risk of over-generalization](https://arxiv.org/pdf/1901.06079), and [the collective effort on  protection of dialect/minority/endangered language resources and raising visibility for minority language speakers in social/legal/business/educational/emergency situations](https://www.eldp.net/).</em></small>
 
 Tech4Good
 ======
