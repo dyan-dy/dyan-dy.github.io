@@ -18,6 +18,8 @@ My previous experience lies in Natural Language Processing(NLP) and 3D Computer 
 + multi-modality alignment, 
 + memory efficient computing.  
 
+When taking on a project, I focus on establishing a clear understanding of the objectives and motivations, followed by a collaborative development of a structured framework. We'll set up proof-of-concept milestones and maintain a steady, interactive approach to achieve our goals, ensuring a smooth and efficient project progression.
+
 Tech4Good
 ======
 I believe knowledge extends beyond academia and value innovative technology ecosystem. By actively applying it into real-world and leveraging efficient teamwork, we can echo and address societal challenges.
