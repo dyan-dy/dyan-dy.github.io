@@ -26,7 +26,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Msc@University of Copenhagen; BA@Wuhan University"
   location         : "Beijing"
-  employer         : "University of Copenhagen"
+  employer         : #usename "University of Copenhagen"
   uri              : # URL
   email            : "dongyu.gao.dy@gmail.com" 
 
