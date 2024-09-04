@@ -28,7 +28,7 @@ With a passion for interdisciplinarity and a commitment to Epistemic Pluralism a
 
 If you want to schedule time for meeting,
 
-<div style="position: relative; padding-bottom: 75%; padding-top: 30px; height: 0; overflow: hidden;">
+<div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
   <iframe src="https://calendar.google.com/calendar/embed?src=31dcd3c50725904f983d9359e9b4a489b1c5fc46c053a8f28aee56b52a6663e2%40group.calendar.google.com&ctz=Asia%2FShanghai" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0" frameborder="0" scrolling="no"></iframe>
 </div>
 
