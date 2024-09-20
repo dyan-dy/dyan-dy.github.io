@@ -26,7 +26,7 @@ Tech4Good
 ======
 I believe knowledge extends beyond academia and value innovative technology ecosystem. By actively applying it into real-world and leveraging efficient teamwork, we can echo and address societal challenges.
 
-Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https://jura.ku.dk/legaltechlab/) and [KU Lighthouse](https://lighthouse.ku.dk/), our team ranked first for two consecutive years in the hackathon events. By incorporating multi-dimensional perspectives from Legal Compliance, Financial Instruments, Regional Policies, and Cutting-edge Technology, we provided innovative solutions in the fields of Decentralized Finance and Sustainable Development.
+Thanks to the great opportunities offered by [Copenhagen Legal Tech Lab](https://jura.ku.dk/legaltechlab/) and [KU Lighthouse](https://lighthouse.ku.dk/), our team ranked first for two consecutive years in the hackathon events. By incorporating multi-dimensional perspectives from Legal Compliance, Financial Instruments, Regional Policies, and Cutting-edge Technology, we provided innovative solutions in the fields of Decentralized Finance and Sustainable Development. 
 
 <!-- With a passion for Open-source transplatform knowledge production and a commitment to Epistemic Pluralism and Global South Epistemology, I am keen to support junior students, particularly those from underprivileged backgrounds. I am actively seeking opportunities to bridge information and skill gaps and to address cultural and language barriers. My journey is one of continuous learning and collaboration, and I look forward to contributing to a more inclusive educational landscape. -->
 
